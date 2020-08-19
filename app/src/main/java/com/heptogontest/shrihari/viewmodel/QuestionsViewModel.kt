@@ -12,12 +12,11 @@ import com.heptogontest.shrihari.model.service.QuestionService
          val questionMutableList: MutableLiveData<QuestionModel> by lazy {
              MutableLiveData<QuestionModel>()
          }
-
          fun getQuestionFromService() {
              QuestionService.getQuestions()
          }
      }
-
+     //to return the companion member
      fun getStaticInstance(): MutableLiveData<QuestionModel> {
          return questionMutableList;
      }
