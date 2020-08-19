@@ -1,17 +1,18 @@
 package com.heptogontest.shrihari.model.service
 
-import android.content.Context
 import com.heptogontest.shrihari.model.data.QuestionModel
+import com.heptogontest.shrihari.viewmodel.QuestionsViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+
 class QuestionService {
 
     companion object {
-        fun getQuestions(context: Context) {
+        fun getQuestions() {
             val questionAPIService by lazy {
-                NetworkInstance.getInstance(context)?.create(QuestionsAPI::class.java)
+                NetworkInstance.getRetroInstance()?.create(QuestionsAPI::class.java)
             }
 
             questionAPIService?.getQuestions()?.enqueue(object : Callback<QuestionModel?> {
@@ -24,6 +25,7 @@ class QuestionService {
                     response: Response<QuestionModel?>
                 ) {
                     println("Sucess = " + response.body().toString())
+                   QuestionsViewModel.questionMutableList.value = response.body();
                 }
 
 

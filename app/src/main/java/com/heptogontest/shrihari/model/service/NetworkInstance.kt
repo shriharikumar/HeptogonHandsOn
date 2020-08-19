@@ -18,7 +18,7 @@ class NetworkInstance {
     companion object {
 
         var instance: Retrofit? = null
-        fun getInstance(context: Context?): Retrofit? {
+        fun getRetroInstance(): Retrofit? {
 
             val client = OkHttpClient.Builder()
                 .connectTimeout(60, TimeUnit.SECONDS)
