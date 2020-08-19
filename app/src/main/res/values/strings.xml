@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HeptogonHandsOn</string>
+    <string name="submit_txt">Submit</string>
 </resources>

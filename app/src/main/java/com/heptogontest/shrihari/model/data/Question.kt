@@ -28,7 +28,7 @@ data class Question(
     @Expose @SerializedName("placeholder") val placeholder: String?,
     @Expose @SerializedName("multiOptionFlag") val multiOptionFlag: Int?,
     @Expose @SerializedName("question") val question: String?,
-    @Expose @SerializedName("answers") val answers: String?,
+    @Expose @SerializedName("answers") var answers: String?,
     @Expose @SerializedName("imageFlag") val imageFlag: Int?,
     @Expose @SerializedName("values") val values: ArrayList<Value>?,
     @Expose @SerializedName("multiSelectFlag") val multiSelectFlag: Int?,

@@ -7,6 +7,14 @@
         <variable
             name="mainActivityListener"
             type="com.heptogontest.shrihari.view.MainActivityListeners" />
+            <variable
+                name="questionAdapter"
+                type="com.heptogontest.shrihari.view.QuestionListAdapter" />
+
+            <variable
+                name="viewModel"
+                type="com.heptogontest.shrihari.viewmodel.QuestionsViewModel" />
+
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -20,18 +28,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
         >
-
-        <TextView
-            android:id="@+id/question_listview"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/question_list_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_name">
-
-        </TextView>
-
-
+            android:text="@string/app_name"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
