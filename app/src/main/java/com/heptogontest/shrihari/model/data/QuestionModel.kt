@@ -9,7 +9,9 @@ import com.google.gson.annotations.SerializedName
  * @param questions
  * @param status
  */
-data class QuestionModel(val  status:Boolean?,val courseProcessId:Int?,val questions: List<Question>?) {
-
+data class QuestionModel(
+    @SerializedName("status") val  status:Boolean?,
+    @SerializedName("courseProcessId") val courseProcessId:Int?,
+    @SerializedName("courseProcessId") val questions: List<Question>?) {
 
     }

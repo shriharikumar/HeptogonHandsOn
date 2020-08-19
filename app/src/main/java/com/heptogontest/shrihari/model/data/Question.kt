@@ -23,18 +23,18 @@ import com.google.gson.annotations.SerializedName
 
 
 data class Question(
-    val errorMessage: String?,
-    val mandatory: Int?,
-    val placeholder: String?,
-    val multiOptionFlag: Int?,
-    val question: String?,
-    val answers: String?,
-    val imageFlag: Int?,
-    val values: List<Value>?,
-    val multiSelectFlag: Int?,
-    val images: List<Any>?,
-    val type: String?,
-    val questionId: Int?,
-    val url: String?) {
+    @SerializedName("errorMessage") val errorMessage: String?,
+    @SerializedName("mandatory") val mandatory: Int?,
+    @SerializedName("placeholder") val placeholder: String?,
+    @SerializedName("multiOptionFlag") val multiOptionFlag: Int?,
+    @SerializedName("question") val question: String?,
+    @SerializedName("answers") val answers: String?,
+    @SerializedName("imageFlag") val imageFlag: Int?,
+    @SerializedName("values") val values: List<Value>?,
+    @SerializedName("multiSelectFlag") val multiSelectFlag: Int?,
+    @SerializedName("images") val images: List<Any>?,
+    @SerializedName("type") val type: String?,
+    @SerializedName("questionId") val questionId: Int?,
+    @SerializedName("url") val url: String?) {
 
 }

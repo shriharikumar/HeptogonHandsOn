@@ -10,5 +10,9 @@ import com.google.gson.annotations.SerializedName
  * @param value
  * @param selected
  */
-data class Value( var selected: Int? = null,var id: Int? = null,var value: String? = null,val imageUrl:Any?) {
+data class Value(
+    @SerializedName("selected") val selected: Int? = null,
+    @SerializedName("id") val id: Int? = null,
+    @SerializedName("value") val value: String? = null,
+    @SerializedName("imageUrl") val imageUrl:Any?) {
 }
