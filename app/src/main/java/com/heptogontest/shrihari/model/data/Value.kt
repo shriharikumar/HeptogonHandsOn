@@ -11,8 +11,8 @@ import com.google.gson.annotations.SerializedName
  * @param selected
  */
 data class Value(
-    @SerializedName("selected") val selected: Int? = null,
-    @SerializedName("id") val id: Int? = null,
-    @SerializedName("value") val value: String? = null,
-    @SerializedName("imageUrl") val imageUrl:Any?) {
+    @Expose @SerializedName("selected") val selected: Int? = null,
+    @Expose @SerializedName("id") val id: Int? = null,
+    @Expose  @SerializedName("value") val value: String? = null,
+    @Expose @SerializedName("imageUrl") val imageUrl:Any?) {
 }

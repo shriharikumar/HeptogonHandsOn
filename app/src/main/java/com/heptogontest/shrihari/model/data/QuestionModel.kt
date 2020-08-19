@@ -10,8 +10,8 @@ import com.google.gson.annotations.SerializedName
  * @param status
  */
 data class QuestionModel(
-    @SerializedName("status") val  status:Boolean?,
-    @SerializedName("courseProcessId") val courseProcessId:Int?,
-    @SerializedName("courseProcessId") val questions: List<Question>?) {
+    @Expose @SerializedName("status") val  status:Boolean?,
+    @Expose @SerializedName("courseProcessId") val courseProcessId:Int?,
+    @Expose  @SerializedName("questions") val questions: ArrayList<Question>?) {
 
     }

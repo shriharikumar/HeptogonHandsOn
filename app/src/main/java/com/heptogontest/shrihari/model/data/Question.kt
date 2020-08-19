@@ -23,18 +23,18 @@ import com.google.gson.annotations.SerializedName
 
 
 data class Question(
-    @SerializedName("errorMessage") val errorMessage: String?,
-    @SerializedName("mandatory") val mandatory: Int?,
-    @SerializedName("placeholder") val placeholder: String?,
-    @SerializedName("multiOptionFlag") val multiOptionFlag: Int?,
-    @SerializedName("question") val question: String?,
-    @SerializedName("answers") val answers: String?,
-    @SerializedName("imageFlag") val imageFlag: Int?,
-    @SerializedName("values") val values: List<Value>?,
-    @SerializedName("multiSelectFlag") val multiSelectFlag: Int?,
-    @SerializedName("images") val images: List<Any>?,
-    @SerializedName("type") val type: String?,
-    @SerializedName("questionId") val questionId: Int?,
-    @SerializedName("url") val url: String?) {
+    @Expose @SerializedName("errorMessage") val errorMessage: String?,
+    @Expose @SerializedName("mandatory") val mandatory: Int?,
+    @Expose @SerializedName("placeholder") val placeholder: String?,
+    @Expose @SerializedName("multiOptionFlag") val multiOptionFlag: Int?,
+    @Expose @SerializedName("question") val question: String?,
+    @Expose @SerializedName("answers") val answers: String?,
+    @Expose @SerializedName("imageFlag") val imageFlag: Int?,
+    @Expose @SerializedName("values") val values: ArrayList<Value>?,
+    @Expose @SerializedName("multiSelectFlag") val multiSelectFlag: Int?,
+    @Expose  @SerializedName("images") val images: ArrayList<Any>?,
+    @Expose @SerializedName("type") val type: String?,
+    @Expose @SerializedName("questionId") val questionId: Int?,
+    @Expose @SerializedName("url") val url: String?) {
 
 }

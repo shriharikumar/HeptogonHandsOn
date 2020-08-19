@@ -8,6 +8,6 @@ import retrofit2.http.Headers
 
 interface QuestionsAPI {
     @Headers("Content-Type: application/json")
-    @GET("get/cpOAeecWGa?indent=2/")
+    @GET("get/cpOAeecWGa?indent=2")
     fun getQuestions(): Call<QuestionModel?>
 }
